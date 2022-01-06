@@ -1,41 +1,31 @@
-문제풀이
-n = int(input())
-array = list(map(int, input().split()))
-m = int(input())
-target_list = list(map(int, input().split()))
-
-#순차 탐색
-def sequentail_search(array, target):
-  for i in range(len(array)):
-    if target == array[i]:
-      return 'yes'
-  return 'no'
-
-result =[]
-for i in range(m):
-  result.append(sequentail_search(array, target_list[i]))
-
-for i in range(len(result)):
-  print(result[i], end=' ')
-
-#이진 탐색
-array.sort()
-target_list.sort()
-
-def binary_search(array, start, end, target):
+#답안
+#반복문을 이용한 이진 탐색
+def binary_search_while(array, target, start, end):
   while start <= end:
-    mid = (start+end)//2
+    mid = (start + end)//2
     if array[mid] == target:
-      return 'yes'
+      return mid
     elif array[mid] > target:
-      end = mid-1
+      end = mid - 1
     else : 
-      start = mid +1
-  return "no"
+      start = mid + 1
+  return None 
 
-result =[]
-for i in range(m):
-  result.append(binary_search(array, 0, n-1, target_list[i]))
+#N(가게의 부품 개수)입력
+n = int(input())
+#가게에 있는 전체 부품 번호를 공백으로 구분하여 입력
+array = list(map(int, input().split()))
+array.sort() #이진 탐색을 수행하기 위하여 정렬
+#M(손님이 확인 요청한 부품 개수 입력)
+m = int(input())
+#손님이 확인 요청한 전체 부품번호를 공백으로 구분하여 입력
+x = list(map(int, input().split()))
 
-for i in range(len(result)):
-  print(result[i], end=' ')
+#손님이 확인 요청한 부품 번호를 하나씩 확인
+for i in x:
+  #해당 부품이 존재하는 지 확인
+  result = binary_search_while(array, i, 0, n-1)
+  if result != None:
+    print("yes", end=' ')
+  else:
+    print("no", end=' ')
