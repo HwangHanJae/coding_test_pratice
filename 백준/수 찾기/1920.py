@@ -1,3 +1,4 @@
+#1920문제 - 수 찾기
 #이진 탐색 알고리즘
 def binary_search(array, start, end, target):
     while start <= end:
