@@ -6,7 +6,7 @@
 
 아래 그림은 2×5 크기의 직사각형을 채운 한 가지 방법의 예이다.
 
-
+<img src="https://user-images.githubusercontent.com/60374463/151657555-d734b313-f6da-4be4-b731-dccd5b4af1f1.png"  width="300" height="150"/>
 
 <h2>입력</h2>
 
