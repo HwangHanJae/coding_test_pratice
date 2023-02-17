@@ -42,4 +42,4 @@ T<sub>n</sub> = 1 + 2 + 3 + ... + n = n(n+1)/2
 
 문제링크 : [백준 10448](https://www.acmicpc.net/problem/10448)
 
-풀이법 : https://my-develop-note.tistory.com/
+풀이법 : https://my-develop-note.tistory.com/203
