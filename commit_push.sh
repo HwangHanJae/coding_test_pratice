@@ -8,6 +8,8 @@ echo "문제 : ${TITLE}"
 
 git add .
 
+echo "> git add 완료"
+
 git commit -m "문제 : ${TITLE} 추가"
 
 echo "> ${TITLE} commit 완료"
