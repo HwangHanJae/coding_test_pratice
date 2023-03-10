@@ -11,6 +11,10 @@ git add .
 git status
 
 # git commit -m '문제 : $title 추가
-git commit -m '$title 추가'
+git commit -m '${title} 추가'
+
+echo "> commit 완료"
 
 git push
+
+echo "> push 완료"
