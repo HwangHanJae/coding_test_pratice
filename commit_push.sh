@@ -1,19 +1,17 @@
 #!/bin/bash
 
-echo "문제 제목을 입력해주세요: "
+TITLE=${1}
 
-read title
-
-echo '제목 : $title'
+echo '제목 : ${TITLE}'
 
 git add .
 
 git status
 
-# git commit -m '문제 : $title 추가
-git commit -m '${title} 추가'
+# git commit -m '문제 : ${TITLE} 추가
+git commit -m "${TITLE} 추가"
 
-echo "> commit 완료"
+echo "> ${TITLE} commit 완료"
 
 git push
 
