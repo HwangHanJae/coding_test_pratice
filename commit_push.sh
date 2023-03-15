@@ -6,6 +6,10 @@ read TITLE
 
 echo "문제 : ${TITLE}"
 
+git pull
+
+echo "> git pull 완료"
+
 git add .
 
 echo "> git add 완료"
