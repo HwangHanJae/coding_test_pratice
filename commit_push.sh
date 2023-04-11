@@ -6,6 +6,10 @@ read TITLE
 
 echo "문제 : ${TITLE}"
 
+echo "Enter를 입력하세요."
+
+read Enter
+
 git pull
 
 echo "> git pull 완료"
